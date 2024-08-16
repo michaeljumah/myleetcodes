@@ -28,3 +28,13 @@ Output: [0,1]"""
 
 #solution
 
+class Solution(object):
+    def twoSum(self, nums, target):
+        mapx = {}
+        for i in range(len(nums)):
+            mapx[nums[i]] = i
+            for i in range(len(nums)):
+                y = target - nums[i]
+                if y in mapx and mapx[y] != i:
+                    return (mapx[y], i)
+
