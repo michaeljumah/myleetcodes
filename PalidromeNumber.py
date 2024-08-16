@@ -26,4 +26,14 @@ Input: x = 10
 Output: false
 Explanation: Reads 01 from right to left. Therefore it is not a palindrome"""
 
+class Solution(object):
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+        new = str(x)
+        new_ = new[::-1]
+        if new == new_:
+            return True
 
