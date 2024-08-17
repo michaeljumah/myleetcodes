@@ -49,3 +49,25 @@ It is guaranteed that s is a valid roman numeral in the range [1, 3999].
 
 """
 
+class Solution(object):
+    def romanToInt(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        # Define the values for Roman numerals
+        roman = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    
+        # Initialize the total to 0
+        total = 0
+    
+        # Loop through each character in the string
+        for i in range(len(s)):
+            # Check if the current value is less than the next value
+            if i + 1 < len(s) and roman[s[i]] < roman[s[i + 1]]:
+                # Subtract the current value if the next value is greater
+                total -= roman[s[i]]
+            else:
+                # Add the current value otherwise
+                total += roman[s[i]]
+        return total
