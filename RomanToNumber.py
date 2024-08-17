@@ -50,7 +50,7 @@ It is guaranteed that s is a valid roman numeral in the range [1, 3999].
 """
 
 class Solution(object):
-    def romanToInt(self, s):
+    def RomanToInt(self, s):
         """
         :type s: str
         :rtype: int
@@ -71,3 +71,4 @@ class Solution(object):
                 # Add the current value otherwise
                 total += roman[s[i]]
         return total
+    
