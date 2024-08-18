@@ -70,5 +70,7 @@ class Solution(object):
             else:
                 # Add the current value otherwise
                 total += roman[s[i]]
+                
+                
         return total
     
